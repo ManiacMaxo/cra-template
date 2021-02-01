@@ -1,21 +1,13 @@
-import React, { Suspense } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App'
 import reportWebVitals from './reportWebVitals'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-
-const Home = React.lazy(() => import('./Home/Home'))
 
 ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
-            <Switch>
-                <Route exact path='/'>
-                    <Suspense fallback='loading...'>
-                        <Home />
-                    </Suspense>
-                </Route>
-                <Route path='/' render={() => <div>404</div>}></Route>
-            </Switch>
+            <App />
         </BrowserRouter>
     </React.StrictMode>,
     document.getElementById('root')
