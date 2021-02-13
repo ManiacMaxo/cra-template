@@ -1,6 +1,6 @@
 {
     "name": "cra-template-typescript-scss",
-    "version": "0.1.0",
+    "version": "0.1.5",
     "main": "template.json",
     "description": "A quick start Create React App template with React Router, TypeScript, SASS and React Icons",
     "keywords": [
