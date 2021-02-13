@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react'
+import { Route, Switch } from 'react-router-dom'
 
 const Home = React.lazy(() => import('./Home'))
 
@@ -9,7 +10,9 @@ const App = () => {
                 <Route exact path='/'>
                     <Home />
                 </Route>
-                <Route path='/' render={() => <div>404</div>}></Route>
+                <Route path='/'>
+                    <div>404</div>
+                </Route>
             </Switch>
         </Suspense>
     )
