@@ -15,7 +15,7 @@ modules.config = {
 
 modules.writeStart = (callback) => {
     chalk.yellow(
-        'Create a module!',
+        'creator',
         figlet.text(
             {
                 verticalLayout: 'full'
@@ -141,7 +141,7 @@ modules.createPageFromTemplate = (filename, callback) => {
         }
     )
 
-    modules.createIndexExporter({ filename, dir })
+    modules.createIndexExporter({ filename, path: dir })
 
     callback()
 }
@@ -185,14 +185,14 @@ modules.createComponentFromTemplate = (options, callback = () => {}) => {
 
     modules.createIndexExporter({
         filename: options.filename,
-        dir,
+        path: dir,
         isPage: false
     })
 
     fs.writeFile(
         `${modules.config.componentsDir}/index.ts`,
-        `export ${options.filename} from './${options.filename}'`,
-        { flag: 'w+' },
+        `export { ${options.filename} } from './${options.filename}'`,
+        { flag: 'a+' },
         (_err) => {
             if (_err) throw _err
 
