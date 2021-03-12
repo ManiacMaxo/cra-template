@@ -191,7 +191,7 @@ modules.createComponentFromTemplate = (options, callback = () => {}) => {
 
     fs.writeFile(
         `${modules.config.componentsDir}/index.ts`,
-        `export { ${options.filename} } from './${options.filename}'`,
+        `export { ${options.filename} } from './${options.filename}'\n`,
         { flag: 'a+' },
         (_err) => {
             if (_err) throw _err
