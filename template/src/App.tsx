@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import { Route, Switch } from 'react-router-dom'
 
-const Home = React.lazy(() => import('./Home'))
+const Home = React.lazy(() => import('./pages/Home'))
 
 const App = () => {
     return (

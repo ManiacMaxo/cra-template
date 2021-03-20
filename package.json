@@ -4,7 +4,7 @@
     "license": "MIT",
     "main": "template.json",
     "name": "cra-template-typescript-scss",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "files": [
         "template",
         "template.json"
