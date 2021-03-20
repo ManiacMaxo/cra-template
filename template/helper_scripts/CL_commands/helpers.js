@@ -7,23 +7,17 @@ const handlebars = require('handlebars')
 const modules = {}
 
 modules.config = {
-    pagesDir: './src',
+    pagesDir: './src/pages',
     componentsDir: './src/components',
     templatesDir: './helper_scripts/templates'
 }
 
 modules.writeStart = (callback) => {
     chalk.yellow(
-        'creator',
-        figlet.text(
-            {
-                verticalLayout: 'full'
-            },
-            (err, data) => {
-                process.stdout.write(`\n${data}\n`)
-                if (callback) callback()
-            }
-        )
+        figlet('Creator', (err, data) => {
+            console.log(`\n${data}\n`)
+            if (callback) callback()
+        })
     )
 }
 
