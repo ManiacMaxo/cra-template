@@ -83,7 +83,7 @@ modules.createPageFromTemplate = (filename, callback) => {
 
     fs.writeFile(
         `${dir}/${filename}.module.scss`,
-        `@import '../scss/const';\n`,
+        `@import '../../scss/const';\n`,
         { flag: 'wx' },
         (_err) => {
             if (_err) throw _err
