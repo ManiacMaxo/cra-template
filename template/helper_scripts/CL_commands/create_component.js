@@ -40,7 +40,7 @@ const askQuestions = () => {
         {
             name: 'haveStyle',
             type: 'confirm',
-            message: () => 'Do you want to use style?',
+            message: () => 'Do you want to add a scss module?',
             default: false
         }
     ]

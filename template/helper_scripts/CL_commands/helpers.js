@@ -83,7 +83,7 @@ modules.createPageFromTemplate = (filename, callback) => {
 
     fs.writeFile(
         `${dir}/${filename}.module.scss`,
-        `@import '../scss/const';\n`,
+        `@import '../../style/const';\n`,
         { flag: 'wx' },
         (_err) => {
             if (_err) throw _err
@@ -124,7 +124,7 @@ modules.createComponentFromTemplate = (options, callback = () => {}) => {
     if (options.haveStyle) {
         fs.writeFile(
             `${dir}/${options.filename}.module.scss`,
-            `@import '../../scss/const';\n`,
+            `@import '../../style/const';\n`,
             { flag: 'wx' },
             (_err) => {
                 if (_err) throw _err

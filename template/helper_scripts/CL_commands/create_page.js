@@ -32,13 +32,15 @@ const askQuestions = () => {
                     return true
                 }
                 return 'It cannot be empty. Please enter it correctly...'
-            },
-        },
+            }
+        }
     ]
 
     inquirer.prompt(questions).then(({ filename }) => {
         helper.createPageFromTemplate(filename, () => {
-            afterPageCreation(filename)
+            setTimeout(() => {
+                afterPageCreation(filename)
+            }, 1250)
         })
     })
 }
